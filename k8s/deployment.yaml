@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: grade-calc-container
-        image: DOCKERHUB_IMAGE_PLACEHOLDER
+        image: prethish16/student-garde-calc:f0ec1f2a937e12c824fe16c38d2aef059529f997
         ports:
         - containerPort: 5000
+        imagePullPolicy: Always
