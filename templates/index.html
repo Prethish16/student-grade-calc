@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grade Calculator</title>
+</head>
+<body>
+    <h2>Student Grade Calculator</h2>
+    <form method="POST">
+        <label>Enter Marks (comma separated):</label><br><br>
+        <input type="text" name="marks" placeholder="e.g. 80, 85, 90" style="width: 300px;"><br><br>
+        <button type="submit">Calculate</button>
+    </form>
+    <br>
+    {% if error %}
+        <p style="color: red;">Error: {{ error }}</p>
+    {% endif %}
+    {% if total is not none %}
+        <h3>Results:</h3>
+        <p>Total Marks: {{ total }}</p>
+        <p>Average Marks: {{ average }}</p>
+    {% endif %}
+</body>
+</html>
